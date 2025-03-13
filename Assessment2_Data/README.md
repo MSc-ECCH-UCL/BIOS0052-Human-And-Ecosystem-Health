@@ -8,4 +8,4 @@ The datasets are as follows:
 
 **lymedisease_shapefile.shp** - a shapefile of the county boundaries that can be used for any GIS data processing and visualisation
 
-**lymedisease_datadictionary.xlsx ** - a data dictionary describing the contents of each column of the dataset, their source, and essential information
+**lymedisease_datadictionary.xlsx** - a data dictionary describing the contents of each column of the dataset, their source, and essential information
