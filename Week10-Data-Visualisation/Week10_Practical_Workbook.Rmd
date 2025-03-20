@@ -450,7 +450,8 @@ order_order = vir_total %>% dplyr::arrange(ViralRichness)
 btc %>%
   dplyr::mutate(HostOrder = factor(HostOrder, levels=order_order$HostOrder, ordered=TRUE)) %>%
   ggplot() + 
-  geom_point(aes(YearFirstRecord, HostOrder, fill=Discovered, size=Discovered), pch=21, alpha=0.8) + 
+  geom_point(aes(YearFirstRecord, HostOrder, fill=Discovered, size=Discovered), 
+             pch=21, alpha=0.8) + 
   theme_bw() +
   scale_fill_viridis_c(option="magma", direction=-1, 
                        begin=0.2, name="Reported number of new\nhost-virus relationships") +
@@ -490,7 +491,8 @@ order_order = vir_total %>% dplyr::arrange(ViralRichness)
 btc %>%
   dplyr::mutate(HostOrder = factor(HostOrder, levels=order_order$HostOrder, ordered=TRUE)) %>%
   ggplot() + 
-  geom_point(aes(YearFirstRecord, HostOrder, fill=Discovered, size=Discovered), pch=21, alpha=0.8) + 
+  geom_point(aes(YearFirstRecord, HostOrder, fill=Discovered, size=Discovered), pch=21, 
+             alpha=0.8) + 
   theme_bw() +
   scale_fill_viridis_c(option="magma", direction=-1, begin=0.2, 
                        name="Reported number of new\nhost-virus relationships") +
@@ -531,9 +533,11 @@ order_order = vir %>%
 
 # visualise as points
 btc %>%
-  dplyr::mutate(VirusFamily = factor(VirusFamily, levels=order_order$VirusFamily, ordered=TRUE)) %>%
+  dplyr::mutate(VirusFamily = factor(VirusFamily, levels=order_order$VirusFamily, 
+                                     ordered=TRUE)) %>%
   ggplot() + 
-  geom_point(aes(YearFirstRecord, VirusFamily, fill=Discovered, size=Discovered), pch=21, alpha=0.8) + 
+  geom_point(aes(YearFirstRecord, VirusFamily, fill=Discovered, size=Discovered), 
+             pch=21, alpha=0.8) + 
   theme_bw() +
   scale_fill_viridis_c(option="magma", direction=-1, 
                        begin=0.2, name="Reported number of new\nhost-virus relationships") +
